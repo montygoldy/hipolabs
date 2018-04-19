@@ -1,3 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("/fonts/Gotham-Bold/Gotham-Bold.eot");
+  src: url("/fonts/Gotham-Bold/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Gotham-Bold/Gotham-Bold.woff") format("woff"), url("/fonts/Gotham-Bold/Gotham-Bold.ttf") format("truetype"), url("/fonts/Gotham-Bold/Gotham-Bold.svg#aller") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham-Regular";
+  src: url("/fonts/Gotham-Book/Gotham-Book.eot");
+  src: url("/fonts/Gotham-Book/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("/fonts/Gotham-Book/Gotham-Book.woff") format("woff"), url("/fonts/Gotham-Book/Gotham-Book.ttf") format("truetype"), url("/fonts/Gotham-Book/Gotham-Book.svg#aller") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham-Light";
+  src: url("/fonts/Gotham-Light/Gotham-Light.eot");
+  src: url("/fonts/Gotham-Light/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/Gotham-Light/Gotham-Light.woff") format("woff"), url("/fonts/Gotham-Light/Gotham-Light.ttf") format("truetype"), url("/fonts/Gotham-Light/Gotham-Light.svg#aller") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "Gotham-Regular"; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=index.css.map */
