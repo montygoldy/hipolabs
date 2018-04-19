@@ -1,5 +1,5 @@
 @import "./variables/variables";
-
+@import "./base/utilities";
 //Base Styles
 @import "./base/base";
 @import "./base/animation";
@@ -9,6 +9,8 @@
 @import "./pages/home";
 
 //Components styles
+@import "./components/header";
 @import "./components/footer";
+@import "./components/searchForm";
 
 

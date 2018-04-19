@@ -5,7 +5,9 @@ const RenderHeader = ({ headerType }) => {
     // Switch statement to use different header for 3 pages
     switch (headerType) {
       case "logo":
-        template = <img src="/image/logo/logo.png" alt="logo" className="logo-image" />
+        template = <div className="home-logo">
+                      <img src="/image/logo/logo.png" alt="logo" className="home-logo__image" />
+                    </div>;
         break;
     
       case "venues":
@@ -25,10 +27,10 @@ const RenderHeader = ({ headerType }) => {
 
 const Header = ({ type }) => {
   return (
-    <header className="header">
+    <header className="header u-margin-bottom-l">
       <RenderHeader headerType={type} />
     </header>
-  );
+  )
 }
 
 export default Header;

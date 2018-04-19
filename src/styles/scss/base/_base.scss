@@ -20,6 +20,8 @@
 @include font("Gotham-Bold", '/fonts/Gotham-Bold/Gotham-Bold');
 @include font("Gotham-Regular", '/fonts/Gotham-Book/Gotham-Book');
 @include font("Gotham-Light", '/fonts/Gotham-Light/Gotham-Light');
+@include font("Gotham-Thin", '/fonts/Gotham-Thin/Gotham-Thin');
+@include font("Gotham-xLight", '/fonts/Gotham-ExtraLight/Gotham-ExtraLight');
 
 html {
   font-size: 62.5%;
