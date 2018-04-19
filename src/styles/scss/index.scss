@@ -1,11 +1,14 @@
 @import "./variables/variables";
 
-//Base files 
+//Base Styles
 @import "./base/base";
 @import "./base/animation";
 @import "./base/utilities";
 
-// components files
+//Page styles
+@import "./pages/home";
+
+//Components styles
 @import "./components/footer";
 
 
