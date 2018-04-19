@@ -1,0 +1,31 @@
+.footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &__list {
+    list-style: none;
+  }
+
+  &__listItem {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__itemLink {
+    text-decoration: none;
+    color: #9b9b9b;
+    font-size: 1.3rem;
+    transition: all .3s;
+
+    &:hover {
+      border-bottom: 1px solid $color-grey-primary-dark;
+      color: $color-grey-primary-dark;
+      transition: all .3s;
+    }
+  }
+}

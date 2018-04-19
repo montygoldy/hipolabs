@@ -28,12 +28,5 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Gotham-Regular";
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+  color: $color-grey-primary;
 }

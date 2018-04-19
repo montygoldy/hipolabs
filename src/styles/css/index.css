@@ -28,12 +28,28 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Gotham-Regular"; }
+  font-family: "Gotham-Regular";
+  color: #9b9b9b; }
 
-ul {
-  list-style: none; }
-
-a {
-  text-decoration: none; }
+.footer {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .footer__list {
+    list-style: none; }
+  .footer__listItem {
+    display: inline-block; }
+    .footer__listItem:not(:last-child) {
+      margin-right: 4rem; }
+  .footer__itemLink {
+    text-decoration: none;
+    color: #9b9b9b;
+    font-size: 1.3rem;
+    transition: all .3s; }
+    .footer__itemLink:hover {
+      border-bottom: 1px solid #333333;
+      color: #333333;
+      transition: all .3s; }
 
 /*# sourceMappingURL=index.css.map */
