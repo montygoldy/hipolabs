@@ -11,7 +11,7 @@ class Venues extends Component {
           <section className="venue">
             <List />
           </section>
-          <Sidebar />
+          <Sidebar type="recent-search" />
         </main>
       </React.Fragment>;
   }

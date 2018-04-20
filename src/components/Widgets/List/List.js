@@ -6,7 +6,7 @@ const List = () => {
     <ul className="venue-list">
       <li className="venue-list__item">
         <Link to="#" className="venue-list__itemLink">
-          <div className="venue-list__cover" />
+          <div className="venue-list__cover"></div>
           <img src="/image/background.jpg" alt="Venue" className="venue-list__image" />
           <div className="venue-list__onTopData">
             <h3 className="venue-list__venue-name">Name of Cafe</h3>
@@ -40,7 +40,7 @@ const List = () => {
       </li>
       <li className="venue-list__item">
         <Link to="#" className="venue-list__itemLink">
-          <div className="venue-list__cover" />
+          <div className="venue-list__cover"></div>
           <img src="/image/background.jpg" alt="Venue" className="venue-list__image" />
           <div className="venue-list__onTopData">
             <h3 className="venue-list__venue-name">Name of Cafe</h3>
@@ -74,7 +74,7 @@ const List = () => {
       </li>
       <li className="venue-list__item">
         <Link to="#" className="venue-list__itemLink">
-          <div className="venue-list__cover" />
+          <div className="venue-list__cover"></div>
           <img src="/image/background.jpg" alt="Venue" className="venue-list__image" />
           <div className="venue-list__onTopData">
             <h3 className="venue-list__venue-name">Name of Cafe</h3>
@@ -108,7 +108,7 @@ const List = () => {
       </li>
       <li className="venue-list__item">
         <Link to="#" className="venue-list__itemLink">
-          <div className="venue-list__cover" />
+          <div className="venue-list__cover"></div>
           <img src="/image/background.jpg" alt="Venue" className="venue-list__image" />
           <div className="venue-list__onTopData">
             <h3 className="venue-list__venue-name">Name of Cafe</h3>

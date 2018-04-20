@@ -25,7 +25,13 @@ const RenderHeader = ({ headerType }) => {
         break;
 
       case "venueDetail":
-        template = <h1>venueDetail</h1>
+        template = <div className="header-container u-margin-bottom-m">
+                      <div className="header-content">
+                        <div className="home-logo u-margin-bottom-l">
+                          <img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" />
+                        </div>
+                      </div>
+                    </div>
         break;
 
       default:

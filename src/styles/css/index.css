@@ -93,6 +93,11 @@ body {
   .main-content section.venue {
     flex: 0 0 60%;
     margin-right: 4.5rem; }
+  .main-content .sidebar-wrapper {
+    flex: 1; }
+
+.sidebar-wrapper {
+  margin-top: -10rem; }
 
 .home-logo {
   width: 250px; }
@@ -205,9 +210,40 @@ form {
     text-decoration: none;
     font-size: 1.4rem;
     color: #9b9b9b;
-    transition: all .3s; }
+    transition: all .3s;
+    display: flex; }
     .sidebar__listItemLink:hover {
       color: #333333; }
+    .sidebar__listItemLink .left {
+      width: 40px;
+      height: 40px;
+      margin-right: 3rem;
+      transform: rotate(-45deg); }
+      .sidebar__listItemLink .left img {
+        width: 100%;
+        height: 100%; }
+    .sidebar__listItemLink .right {
+      text-align: left;
+      font-size: 1.4rem; }
+      .sidebar__listItemLink .right h4 {
+        margin-bottom: .5rem; }
+      .sidebar__listItemLink .right p {
+        font-family: "Gotham-Light"; }
+
+.tips-sidebar {
+  height: auto !important; }
+  .tips-sidebar .sidebar__listItem {
+    padding: 3rem 2rem !important; }
+    .tips-sidebar .sidebar__listItem:last-child {
+      border-bottom: 1px solid #e4e4e4 !important; }
+  .tips-sidebar .allTips {
+    margin: 5rem 0;
+    font-size: 1.2rem;
+    color: #7a74d2;
+    transition: all .3s; }
+    .tips-sidebar .allTips:hover {
+      color: #1e0db4;
+      transform: scale(1.05); }
 
 .venue-list {
   list-style: none;
@@ -274,7 +310,7 @@ form {
       .venue-list__venueInfo .right .bar .percentage {
         width: 80%;
         height: 3px;
-        background: linear-gradient(to right bottom, #c4c0ff, #1e0db4); }
+        background: linear-gradient(to right bottom, #c4c0ff, #a59fee, #8b81ff, #1e0db4); }
   .venue-list__userWrapper, .venue-list__tagWrapper {
     flex: 0 0 25%; }
   .venue-list__ratingWrapper {
@@ -290,5 +326,53 @@ form {
       right: 1.4rem;
       top: 4px;
       font-size: 1.5rem; }
+
+.imageList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .imageList__item {
+    flex: 0 0 48%;
+    margin-bottom: 4%;
+    height: 30rem;
+    width: 100%;
+    position: relative; }
+  .imageList__itemLink {
+    color: #fff;
+    text-decoration: none; }
+  .imageList__itemLink:hover .imageList__cover {
+    visibility: visible;
+    opacity: 1; }
+  .imageList__image {
+    max-width: 100%;
+    height: 100%; }
+  .imageList__cover {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 25, 95, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s; }
+    .imageList__cover .userBox .userImage {
+      width: 4rem;
+      height: 4rem;
+      margin: auto;
+      transform: rotate(45deg);
+      border: 2px solid #000;
+      overflow: hidden; }
+      .imageList__cover .userBox .userImage img {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-45deg); }
+    .imageList__cover .userBox h4.username {
+      font-size: 1.4rem;
+      margin-top: 1.5rem; }
 
 /*# sourceMappingURL=index.css.map */
