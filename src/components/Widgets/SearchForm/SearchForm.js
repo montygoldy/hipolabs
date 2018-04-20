@@ -5,7 +5,7 @@ const SearchForm = () => {
     <form>
       <input type="text" name="place" className="place" placeholder="I'm looking for" />
       <input type="text" name="location" className="location" placeholder="Istanbul" />
-      <button><img src="/image/search.png" alr="search icon" /></button>
+      <button><img src="/image/search.png" alt="search icon" /></button>
     </form>
   )
 }

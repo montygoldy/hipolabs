@@ -1,7 +1,7 @@
 form {
   display: flex;
   justify-content: space-between;
-  min-width: 47.5rem;
+  width: 47.5rem;
 
   input{
     padding: 1rem;
@@ -37,7 +37,7 @@ form {
     }
 
     &:hover {
-      background: #D22015;
+      background: $btn-color-hover;
     }
   }
 }

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Header from "../Widgets/Header/Header";
+class Venues extends Component {
 
-const Venues = () => {
-  return (
-    <div>
-      Venues
-    </div>
-  );
+  render() {
+    return (
+      <React.Fragment>
+        <Header type="venues" />
+        <div>
+          Venues
+        </div>
+      </React.Fragment>
+    );
+  }
 };
 
 export default Venues;
