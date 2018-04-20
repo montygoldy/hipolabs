@@ -84,6 +84,10 @@ body {
       line-height: 1.6;
       font-family: "Gotham-Light"; }
 
+.main-content {
+  width: 80%;
+  margin: auto; }
+
 .home-logo {
   width: 250px; }
   .home-logo__image {
