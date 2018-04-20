@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 68.5rem;
 
   h3 {
     font-size: 1.6rem;
@@ -35,10 +35,13 @@
 
   &__listItem {
     display: block;
-    border-bottom: 1px solid $color-grey-primary-light;
     width: 95%;
     margin: auto;
     padding: 2rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-grey-primary-light;
+    }
   }
 
   &__listItemLink {
@@ -47,8 +50,8 @@
     color: $color-grey-primary;
     transition: all .3s;
 
-     &:hover {
-       color: $color-grey-primary-dark;
+    &:hover {
+      color: $color-grey-primary-dark;
     }
   }
 }

@@ -2,4 +2,11 @@
   width: 80%;
   margin: auto;
   display: flex;
+  border-bottom: 2px solid $color-grey-primary-light;
+  padding-bottom: 3rem;
+
+  section.venue {
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+  }
 }

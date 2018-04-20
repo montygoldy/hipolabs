@@ -5,15 +5,15 @@ import List from "../Widgets/List/List";
 class Venues extends Component {
 
   render() {
-    return (
-      <React.Fragment>
+    return <React.Fragment>
         <Header type="venues" />
         <main className="main-content">
-          <List />
+          <section className="venue">
+            <List />
+          </section>
           <Sidebar />
         </main>
-      </React.Fragment>
-    );
+      </React.Fragment>;
   }
 };
 

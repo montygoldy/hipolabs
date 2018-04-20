@@ -1,11 +1,11 @@
 .u-margin-bottom-l {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-bottom-m {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem !important; }
 
 .u-margin-bottom-s {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 *,
 *::after,
@@ -53,13 +53,13 @@ body {
   color: #9b9b9b; }
 
 .u-margin-bottom-l {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-bottom-m {
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem !important; }
 
 .u-margin-bottom-s {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .pageContainer {
   background-image: url("/image/background.jpg");
@@ -87,7 +87,12 @@ body {
 .main-content {
   width: 80%;
   margin: auto;
-  display: flex; }
+  display: flex;
+  border-bottom: 2px solid #e4e4e4;
+  padding-bottom: 3rem; }
+  .main-content section.venue {
+    flex: 0 0 60%;
+    margin-right: 4.5rem; }
 
 .home-logo {
   width: 250px; }
@@ -167,7 +172,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  height: 68.5rem; }
   .sidebar h3 {
     font-size: 1.6rem;
     color: #4a4a4a;
@@ -191,10 +196,11 @@ form {
     text-align: center; }
   .sidebar__listItem {
     display: block;
-    border-bottom: 1px solid #e4e4e4;
     width: 95%;
     margin: auto;
     padding: 2rem; }
+    .sidebar__listItem:not(:last-child) {
+      border-bottom: 1px solid #e4e4e4; }
   .sidebar__listItemLink {
     text-decoration: none;
     font-size: 1.4rem;
@@ -202,5 +208,87 @@ form {
     transition: all .3s; }
     .sidebar__listItemLink:hover {
       color: #333333; }
+
+.venue-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .venue-list__item {
+    flex: 0 0 48%;
+    margin-bottom: 4%;
+    height: 30rem;
+    width: 100%;
+    position: relative; }
+  .venue-list__itemLink {
+    color: #fff;
+    text-decoration: none; }
+  .venue-list__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: #12195f; }
+  .venue-list__image {
+    max-width: 100%;
+    height: 100%; }
+  .venue-list__onTopData {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    width: 100%; }
+  .venue-list__venue-name {
+    position: relative;
+    padding-bottom: 1rem;
+    font-size: 2.5rem;
+    font-family: "Gotham-xLight";
+    margin-bottom: 1.8rem; }
+    .venue-list__venue-name::before {
+      content: "";
+      width: 4.8rem;
+      height: 2px;
+      background: #c4c0ff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 20; }
+  .venue-list__venueInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem; }
+    .venue-list__venueInfo > div {
+      display: flex;
+      align-items: center; }
+    .venue-list__venueInfo .left img {
+      width: 1rem;
+      height: 1rem;
+      margin-right: .8rem; }
+    .venue-list__venueInfo .right .bar {
+      width: 6rem;
+      height: 3px;
+      background: #000; }
+      .venue-list__venueInfo .right .bar .percentage {
+        width: 80%;
+        height: 3px;
+        background: linear-gradient(to right bottom, #c4c0ff, #1e0db4); }
+  .venue-list__userWrapper, .venue-list__tagWrapper {
+    flex: 0 0 25%; }
+  .venue-list__ratingWrapper {
+    flex: 1;
+    position: relative; }
+    .venue-list__ratingWrapper img {
+      position: absolute;
+      top: -1.8rem;
+      right: -2rem;
+      width: 9rem; }
+    .venue-list__ratingWrapper .rating-text {
+      position: absolute;
+      right: 1.4rem;
+      top: 4px;
+      font-size: 1.5rem; }
 
 /*# sourceMappingURL=index.css.map */
