@@ -1,7 +1,11 @@
 import React from "react";
 
 const ListItem = () => {
-  return <di>ListItem</di>;
+  return (
+    <aside className="sidebar">
+        <h3>Recent Searches</h3>  
+    </aside>
+  )
 };
 
 export default ListItem;

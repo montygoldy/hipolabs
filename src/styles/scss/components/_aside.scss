@@ -1,0 +1,54 @@
+.sidebar {
+  flex: 1;
+  box-shadow: 0 0 3.4rem 0 rgba(255, 95, 95, 0.32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    font-size: 1.6rem;
+    color: #4a4a4a;
+    padding: 4rem 0 3rem 0;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      width: 7rem;
+      height: 2px;
+      background: $color-line;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    margin-top: 1.5rem;
+    list-style: none;
+    text-align: center;
+  }
+
+  &__listItem {
+    display: block;
+    border-bottom: 1px solid $color-grey-primary-light;
+    width: 95%;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  &__listItemLink {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $color-grey-primary;
+    transition: all .3s;
+
+     &:hover {
+       color: $color-grey-primary-dark;
+    }
+  }
+}
