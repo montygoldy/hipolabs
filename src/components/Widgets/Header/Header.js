@@ -25,13 +25,47 @@ const RenderHeader = ({ headerType }) => {
         break;
 
       case "venueDetail":
-        template = <div className="header-container u-margin-bottom-m">
-                      <div className="header-content">
-                        <div className="home-logo u-margin-bottom-l">
-                          <img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" />
-                        </div>
+        template = <div className="venue-detail-header u-margin-bottom-m">
+            <div className="header-top-content">
+              <div className="home-logo">
+                <img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" />
+                <img src="/image/category-icon.png" alt="category icon" className="category-icon" />
+              </div>
+              <h2 className="venue-name">Name of Cafe</h2>
+            </div>
+            <div className="venue-info-section">
+              <div className="venue-info-content">
+                <div className="left-side">
+                  <div className="address">
+                    <img src="/image/location-icon.png" alt="Icon" />
+                    <span>Cafegeria Mh. hadife Sk. No: 15 Kadikoy</span>
+                  </div>
+                  <div className="telephone">
+                    <img src="/image/telephone-icon.png" alt="Icon" />
+                    <span>0 (216) 346718</span>
+                  </div>
+                  <div className="venue-userInfo">
+                    <div className="user">
+                      <img src="/image/user-icon.png" alt="Icon" />
+                      <span>123</span>
+                    </div>
+                    <div className="tag">
+                      <img src="/image/tag-icon.png" alt="Icon" />
+                      <div className="bar">
+                        <div className="percentage" />
                       </div>
                     </div>
+                  </div>
+                </div>
+
+                <div className="right-side">
+                  <div className="rating">
+                    <span className="rating-text">8.8</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>;
         break;
 
       default:

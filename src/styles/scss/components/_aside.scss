@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   height: 68.5rem;
+  background: $color-white;
 
   h3 {
     font-size: 1.6rem;
@@ -86,6 +87,7 @@
 
 .tips-sidebar {
   height: auto!important;
+  box-shadow: 0 0 3.4rem 0 rgba(115, 95, 255, 0.32);
 
   .sidebar__listItem {
     padding: 3rem 2rem!important;

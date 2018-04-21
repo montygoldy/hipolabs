@@ -1,3 +1,6 @@
 .sidebar-wrapper {
-  margin-top: -10rem;
+  position: relative;
+  top: -100px;
+  z-index: 99999;
+  margin-bottom: -5rem;
 }
