@@ -61,12 +61,22 @@
       margin-bottom: 2rem;
     }
 
-    .venue-list {
+    .venue-list,
+    .imageList {
       flex-direction: column;
 
       &__item {
         flex: 1;
       }
     }
+  }
+  .venue-list__item {
+    height: 25rem !important;
+  }
+}
+
+@include respond(small-phone) {
+  .venue-list__item {
+    height: 20rem!important;
   }
 }

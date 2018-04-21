@@ -50,7 +50,8 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Gotham-Regular";
-  color: #9b9b9b; }
+  color: #9b9b9b;
+  overflow-x: hidden; }
 
 .u-margin-bottom-l {
   margin-bottom: 8rem !important; }
@@ -128,16 +129,55 @@ body {
 @media only screen and (max-width: 37.5em) {
   .main-content section.venue {
     margin-bottom: 2rem; }
-  .main-content .venue-list {
+  .main-content .venue-list,
+  .main-content .imageList {
     flex-direction: column; }
-    .main-content .venue-list__item {
-      flex: 1; } }
+    .main-content .venue-list__item,
+    .main-content .imageList__item {
+      flex: 1; }
+
+  .venue-list__item {
+    height: 25rem !important; } }
+@media only screen and (max-width: 23.5em) {
+  .venue-list__item {
+    height: 20rem !important; } }
 .sidebar-wrapper {
   position: relative;
   top: -100px;
   z-index: 99999;
   margin-bottom: -5rem; }
 
+@media only screen and (max-width: 75em) {
+  .sidebar-wrapper {
+    top: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem; } }
+@media only screen and (max-width: 56.25em) {
+  .sidebar-wrapper {
+    top: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+
+  .imageList__item {
+    height: 25rem !important; } }
+@media only screen and (max-width: 37.5em) {
+  .venue-detail-header h2.venue-name {
+    font-size: 3rem !important; }
+  .venue-detail-header .home-logo {
+    width: 20rem !important; }
+    .venue-detail-header .home-logo .category-icon {
+      top: 44px !important;
+      left: -40px !important;
+      width: 13rem !important; }
+
+  .rating {
+    width: 5rem !important;
+    height: 5rem !important; }
+    .rating .rating-text {
+      font-size: 1.5rem !important; } }
+@media only screen and (max-width: 23.5em) {
+  .imageList__item {
+    height: 20rem !important; } }
 .home-logo {
   width: 250px; }
   .home-logo__image {
@@ -358,7 +398,7 @@ form {
     justify-content: center; }
   .tips-sidebar .allTips {
     margin: 5rem 0;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #7a74d2;
     transition: all .3s; }
     .tips-sidebar .allTips:hover {

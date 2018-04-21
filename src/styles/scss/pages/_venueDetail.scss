@@ -4,3 +4,52 @@
   z-index: 99999;
   margin-bottom: -5rem;
 }
+
+//Responsiveness
+@include respond(tab-land) {
+  .sidebar-wrapper {
+    top: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@include respond(tab-port) {
+  .sidebar-wrapper {
+    top: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .imageList__item {
+    height: 25rem !important;
+  }
+}
+@include respond(phone) {
+  .venue-detail-header {
+    h2.venue-name {
+      font-size: 3rem !important;
+    }
+    .home-logo {
+      width: 20rem !important;
+      .category-icon {
+        top: 44px !important;
+        left: -40px !important;
+        width: 13rem !important;
+      }
+    }
+  }
+  
+  .rating {
+    width: 5rem !important;
+    height: 5rem !important;
+    .rating-text {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+@include respond(small-phone) {
+  .imageList__item {
+    height: 20rem !important;
+  }
+}
