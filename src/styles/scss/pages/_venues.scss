@@ -14,3 +14,59 @@
     flex: 1;
   }
 }
+
+// Responsiveness
+
+@include respond(tab-port) {
+  .header-container {
+    height: 320px !important;
+  }
+}
+
+@include respond(tab-land) {
+
+  .header-container{
+    
+    .header-content {
+      flex-direction: column;
+
+      .home-logo{
+        margin: auto;
+        margin-bottom: 1rem!important;
+      }
+
+      .search-container{
+        margin-top: 1rem!important;
+
+        form {
+          margin: auto;
+        }
+      }
+    }
+  }
+  .main-content {
+    flex-direction: column;
+
+    section.venue {
+      flex: 1;
+      margin-right: 0;
+    }
+  }
+}
+
+@include respond(phone) {
+  .main-content {
+
+    section.venue{
+      margin-bottom: 2rem;
+    }
+
+    .venue-list {
+      flex-direction: column;
+
+      &__item {
+        flex: 1;
+      }
+    }
+  }
+}

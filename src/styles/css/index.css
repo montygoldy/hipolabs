@@ -106,6 +106,32 @@ body {
   .main-content .sidebar-wrapper {
     flex: 1; }
 
+@media only screen and (max-width: 56.25em) {
+  .header-container {
+    height: 320px !important; } }
+@media only screen and (max-width: 75em) {
+  .header-container .header-content {
+    flex-direction: column; }
+    .header-container .header-content .home-logo {
+      margin: auto;
+      margin-bottom: 1rem !important; }
+    .header-container .header-content .search-container {
+      margin-top: 1rem !important; }
+      .header-container .header-content .search-container form {
+        margin: auto; }
+
+  .main-content {
+    flex-direction: column; }
+    .main-content section.venue {
+      flex: 1;
+      margin-right: 0; } }
+@media only screen and (max-width: 37.5em) {
+  .main-content section.venue {
+    margin-bottom: 2rem; }
+  .main-content .venue-list {
+    flex-direction: column; }
+    .main-content .venue-list__item {
+      flex: 1; } }
 .sidebar-wrapper {
   position: relative;
   top: -100px;
@@ -301,8 +327,7 @@ form {
     text-decoration: none;
     font-size: 1.4rem;
     color: #9b9b9b;
-    transition: all .3s;
-    display: flex; }
+    transition: all .3s; }
     .sidebar__listItemLink:hover {
       color: #333333; }
     .sidebar__listItemLink .left {
@@ -328,6 +353,9 @@ form {
     padding: 3rem 2rem !important; }
     .tips-sidebar .sidebar__listItem:last-child {
       border-bottom: 1px solid #e4e4e4 !important; }
+  .tips-sidebar .sidebar__listItemLink {
+    display: flex;
+    justify-content: center; }
   .tips-sidebar .allTips {
     margin: 5rem 0;
     font-size: 1.2rem;

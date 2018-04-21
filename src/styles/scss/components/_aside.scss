@@ -50,9 +50,6 @@
     font-size: 1.4rem;
     color: $color-grey-primary;
     transition: all .3s;
-    display: flex;
-    
-
 
     &:hover {
       color: $color-grey-primary-dark;
@@ -95,6 +92,11 @@
     &:last-child {
       border-bottom: 1px solid $color-grey-primary-light!important;
     }
+  }
+
+  .sidebar__listItemLink {
+    display: flex;
+    justify-content: center;
   }
 
   .allTips {
