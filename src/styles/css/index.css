@@ -64,6 +64,7 @@ body {
 .pageContainer {
   background-image: url("/image/background.jpg");
   height: 90vh;
+  min-height: 62rem;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -84,6 +85,15 @@ body {
       line-height: 1.6;
       font-family: "Gotham-Light"; }
 
+@media only screen and (max-width: 23.5em) {
+  .pageContainer main.content .secondary-text {
+    margin-bottom: 2rem !important; } }
+@media only screen and (max-width: 75em) {
+  .pageContainer main.content {
+    width: 90%;
+    justify-content: center; }
+    .pageContainer main.content form {
+      margin-bottom: 5rem !important; } }
 .main-content {
   width: 80%;
   margin: auto;
@@ -245,6 +255,12 @@ form {
     form button:hover {
       background: #D22015; }
 
+@media only screen and (max-width: 37.5em) {
+  form {
+    flex-direction: column;
+    width: 90%; }
+    form input {
+      margin-bottom: 1rem; } }
 .sidebar {
   flex: 1;
   box-shadow: 0 0 3.4rem 0 rgba(255, 95, 95, 0.32);

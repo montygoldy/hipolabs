@@ -41,3 +41,14 @@ form {
     }
   }
 }
+
+@include respond (phone) {
+  form {
+    flex-direction: column;
+    width: 90%;
+    
+    input {
+      margin-bottom: 1rem;
+    }
+  }
+}

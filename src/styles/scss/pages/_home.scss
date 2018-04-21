@@ -1,6 +1,7 @@
 .pageContainer {
   background-image: url('/image/background.jpg');
   height: 90vh;
+  min-height: 62rem;
   background-size: cover; 
   display: flex;
   align-items: center;
@@ -24,6 +25,32 @@
       text-align: center;
       line-height: 1.6;
       font-family: "Gotham-Light";
+    }
+  }
+}
+
+// Responsiveness
+
+@include respond(small-phone) {
+  .pageContainer {
+    main.content {
+      .secondary-text {
+        margin-bottom: 2rem!important;
+      }
+    }
+  }
+}
+
+@include respond(tab-land) {
+  .pageContainer {
+
+    main.content {
+      width: 90%;
+      justify-content: center;
+
+      form {
+        margin-bottom: 5rem!important;
+      }
     }
   }
 }
