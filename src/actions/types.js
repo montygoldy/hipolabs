@@ -1,0 +1,2 @@
+export const FETCH_VENUE = 'FETCH_VENUE';
+export const SEARCH_VENUES = 'SEARCH_VENUES';

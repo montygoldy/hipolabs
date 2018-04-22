@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom';
 import './styles/css/index.css';
 import Routes from './components/Routes';
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux'; 
+import store from "./store";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Provider>
   );
 };
 

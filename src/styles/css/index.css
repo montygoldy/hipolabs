@@ -369,7 +369,8 @@ form {
     color: #9b9b9b;
     transition: all .3s; }
     .sidebar__listItemLink:hover {
-      color: #333333; }
+      color: #333333;
+      border-bottom: 1px solid #333333; }
     .sidebar__listItemLink .left {
       width: 40px;
       height: 40px;

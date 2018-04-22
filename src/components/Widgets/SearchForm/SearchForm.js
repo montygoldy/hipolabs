@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-
+import { connect } from 'react-redux';
+import { fetchVenues } from "../../../actions/searchVenues";
 class SearchForm extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      place: "",
-      location: ""
-    }
-  }
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,7 +13,7 @@ class SearchForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { place, location } = this.state;
-    this.props.onSearch(place, location);
+    this.props.fetchVenues(place, location);
   }
 
   render() {
@@ -33,4 +27,4 @@ class SearchForm extends Component {
   }
 }
 
-export default SearchForm;
+export default connect(null, { fetchVenues} )(SearchForm);
