@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchVenues } from "../../../actions/venues";
+import { withRouter } from "react-router";
 class SearchForm extends Component {
 
   handleChange = (e) => {
@@ -14,6 +15,7 @@ class SearchForm extends Component {
     e.preventDefault();
     const { place, location } = this.state;
     this.props.fetchVenues(place, location);
+    this.props.history.push("/venues");
   }
 
   render() {
@@ -27,4 +29,4 @@ class SearchForm extends Component {
   }
 }
 
-export default connect(null, { fetchVenues} )(SearchForm);
+export default withRouter(connect(null, { fetchVenues} )(SearchForm));
