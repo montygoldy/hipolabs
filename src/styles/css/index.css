@@ -372,13 +372,19 @@ form {
       color: #333333;
       border-bottom: 1px solid #333333; }
     .sidebar__listItemLink .left {
-      width: 40px;
-      height: 40px;
+      width: 4rem;
+      height: 4rem;
       margin-right: 3rem;
-      transform: rotate(-45deg); }
+      transform: rotate(45deg);
+      position: relative;
+      overflow: hidden; }
       .sidebar__listItemLink .left img {
-        width: 100%;
-        height: 100%; }
+        position: absolute;
+        top: -9px;
+        left: -9px;
+        width: 6rem;
+        height: 6rem;
+        transform: rotate(-45deg); }
     .sidebar__listItemLink .right {
       text-align: left;
       font-size: 1.4rem; }
@@ -526,15 +532,18 @@ form {
     justify-content: center;
     transition: all .3s; }
     .imageList__cover .userBox .userImage {
+      position: relative;
       width: 4rem;
       height: 4rem;
       margin: auto;
       transform: rotate(45deg);
-      border: 2px solid #000;
       overflow: hidden; }
       .imageList__cover .userBox .userImage img {
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        top: -9px;
+        left: -9px;
+        width: 6rem;
+        height: 6rem;
         transform: rotate(-45deg); }
     .imageList__cover .userBox h4.username {
       font-size: 1.4rem;

@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 class Venues extends Component {
   
   render() {
+    console.log(this.props);
     return <React.Fragment>
         <Header type="venues" />
         <main className="main-content">

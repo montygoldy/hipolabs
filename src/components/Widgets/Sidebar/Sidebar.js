@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const RenderSidebar = ({ sidebarType, venueTips }) => {
-  console.log(venueTips.tips)
   let template = null;
   switch (sidebarType) {
     case "recent-search":
@@ -73,7 +72,6 @@ const RenderSidebar = ({ sidebarType, venueTips }) => {
                 <img src="/image/background.jpg" alt="Tips" className="tips-image" />
               </div>
               <div className="right">
-                <p>{venueTips.tips}</p>
                 <h4>Arzu sendag</h4>
                 <p>guzei mekan cok serdim.</p>
               </div>

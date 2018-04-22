@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { fetchVenues } from "../../../actions/searchVenues";
+import { fetchVenues } from "../../../actions/venues";
 class SearchForm extends Component {
 
   handleChange = (e) => {

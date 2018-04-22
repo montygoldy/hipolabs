@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../Widgets/Header/Header";
 import Sidebar from "../Widgets/Sidebar/Sidebar";
 import ImageList from "../Widgets/List/ImageList";
-import { fetchVenueDetail } from "../../actions/searchVenues";
+import { fetchVenueDetail } from "../../actions/venues";
 import { connect } from "react-redux";
 class VenueDetail extends Component {
   componentWillMount() {
