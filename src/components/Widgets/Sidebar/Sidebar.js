@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const RenderSidebar = ({ sidebarType }) => {
+const RenderSidebar = ({ sidebarType, venueTips }) => {
+  console.log(venueTips.tips)
   let template = null;
   switch (sidebarType) {
     case "recent-search":
@@ -72,68 +73,16 @@ const RenderSidebar = ({ sidebarType }) => {
                 <img src="/image/background.jpg" alt="Tips" className="tips-image" />
               </div>
               <div className="right">
-                <h4>Arzu sendag</h4>
-                <p>guzei mekan cok serdim.</p>
-              </div>
-            </Link>
-          </li>
-          <li className="sidebar__listItem">
-            <Link to="#" className="sidebar__listItemLink">
-              <div className="left">
-                <img src="/image/background.jpg" alt="Tips" className="tips-image" />
-              </div>
-              <div className="right">
-                <h4>Arzu sendag</h4>
-                <p>guzei mekan cok serdim.</p>
-              </div>
-            </Link>
-          </li>
-          <li className="sidebar__listItem">
-            <Link to="#" className="sidebar__listItemLink">
-              <div className="left">
-                <img src="/image/background.jpg" alt="Tips" className="tips-image" />
-              </div>
-              <div className="right">
-                <h4>Arzu sendag</h4>
-                <p>guzei mekan cok serdim.</p>
-              </div>
-            </Link>
-          </li>
-          <li className="sidebar__listItem">
-            <Link to="#" className="sidebar__listItemLink">
-              <div className="left">
-                <img src="/image/background.jpg" alt="Tips" className="tips-image" />
-              </div>
-              <div className="right">
-                <h4>Arzu sendag</h4>
-                <p>guzei mekan cok serdim.</p>
-              </div>
-            </Link>
-          </li>
-          <li className="sidebar__listItem">
-            <Link to="#" className="sidebar__listItemLink">
-              <div className="left">
-                <img src="/image/background.jpg" alt="Tips" className="tips-image" />
-              </div>
-              <div className="right">
-                <h4>Arzu sendag</h4>
-                <p>guzei mekan cok serdim.</p>
-              </div>
-            </Link>
-          </li>
-          <li className="sidebar__listItem">
-            <Link to="#" className="sidebar__listItemLink">
-              <div className="left">
-                <img src="/image/background.jpg" alt="Tips" className="tips-image" />
-              </div>
-              <div className="right">
+                <p>{venueTips.tips}</p>
                 <h4>Arzu sendag</h4>
                 <p>guzei mekan cok serdim.</p>
               </div>
             </Link>
           </li>
         </ul>
-        <Link to="#" className="allTips">All Tips</Link>
+        <Link to="#" className="allTips">
+          All Tips
+        </Link>
       </aside>;
     break;
 
@@ -141,11 +90,11 @@ const RenderSidebar = ({ sidebarType }) => {
       template = null;
       break;
   }
-   return template;
+  return template;
 }
   
-const Sidebar = ({ type }) => {
-  return  <RenderSidebar sidebarType={type} />
+const Sidebar = ({ type, venueDetail }) => {
+  return  <RenderSidebar sidebarType={type} venueTips={venueDetail} />
 
 }
 

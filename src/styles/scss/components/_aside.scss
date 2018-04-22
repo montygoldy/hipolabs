@@ -98,6 +98,10 @@
   .sidebar__listItemLink {
     display: flex;
     justify-content: center;
+
+    &:hover {
+      border-bottom: none!important;
+    }
   }
 
   .allTips {

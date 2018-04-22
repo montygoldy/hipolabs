@@ -397,6 +397,8 @@ form {
   .tips-sidebar .sidebar__listItemLink {
     display: flex;
     justify-content: center; }
+    .tips-sidebar .sidebar__listItemLink:hover {
+      border-bottom: none !important; }
   .tips-sidebar .allTips {
     margin: 5rem 0;
     font-size: 1.6rem;
@@ -417,6 +419,8 @@ form {
     height: 30rem;
     width: 100%;
     position: relative; }
+  .venue-list__item {
+    overflow: hidden; }
   .venue-list__itemLink {
     color: #fff;
     text-decoration: none; }
