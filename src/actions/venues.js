@@ -4,15 +4,14 @@ const api_key = process.env.REACT_APP_CLIENT_SECRET;
 
 export const fetchVenues = (place, location) => dispatch => {
   fetch(
-    `https://api.foursquare.com/v2/venues/explore?near=${location}&query=${place}&limit=10&venuePhotos=1&client_id=${api_id}&client_secret=${api_key}&v=20180323`
+    `https://api.foursquare.com/v2/venues/search?near=${location}&query=${place}&limit=10&venuePhotos=1&client_id=${api_id}&client_secret=${api_key}&v=20180323`
   )
     .then(res => res.json())
     .then(data =>
-      // dispatch({
-      //   type: SEARCH_VENUES,
-      //   payload: data.response.groups[0].items
-      // })
-      console.log(data.response.groups[0].items)
+      dispatch({
+        type: SEARCH_VENUES,
+        payload: data.response.venues
+      })
     )
     .catch(err => console.log(err));
 };
