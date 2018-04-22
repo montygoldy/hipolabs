@@ -1,13 +1,14 @@
 import React from 'react';
 import SearchForm from "../SearchForm/SearchForm";
+import { Link } from "react-router-dom";
 
 const RenderHeader = ({ headerType }) => {
     let template = null;
     // Switch statement to use different header for 3 pages
     switch (headerType) {
-      case "logo":
+      case "home":
         template =  <div className="home-logo u-margin-bottom-l">
-                      <img src="/image/logo/logo.png" alt="logo" className="home-logo__image" />
+                      <Link to="/"><img src="/image/logo/logo.png" alt="logo" className="home-logo__image" /></Link>
                     </div>
         break;
     
@@ -15,7 +16,7 @@ const RenderHeader = ({ headerType }) => {
         template = <div className="header-container u-margin-bottom-m">
                       <div className="header-content">
                         <div className="home-logo u-margin-bottom-l">
-                          <img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" />
+                          <Link to="/"><img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" /></Link>
                         </div>
                         <div className="search-container">
                           <SearchForm />
@@ -28,7 +29,7 @@ const RenderHeader = ({ headerType }) => {
         template = <div className="venue-detail-header u-margin-bottom-m">
             <div className="header-top-content">
               <div className="home-logo">
-                <img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" />
+                <Link to="/"><img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" /></Link>
                 <img src="/image/category-icon.png" alt="category icon" className="category-icon" />
               </div>
               <h2 className="venue-name">Name of Cafe</h2>

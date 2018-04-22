@@ -12,7 +12,8 @@ import NotFound from "../components/NotFound";
 
 class Routes extends Component {
   render() {
-    return <Layout>
+    return (
+      <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/venues" component={Venues} />
@@ -22,7 +23,8 @@ class Routes extends Component {
           <Route path="/blog" component={Blog} />
           <Route component={NotFound} />
         </Switch>
-      </Layout>;
+      </Layout>
+    )
   }
 }
 

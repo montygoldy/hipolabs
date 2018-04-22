@@ -26,7 +26,7 @@ class SearchForm extends Component {
     return (
       <form action="">
         <input type="text" name="place" onChange={this.handleChange} value={this.place} className="place" placeholder="I'm looking for" />
-        <input type="text" name="location" onChange={this.handleChange} value={this.location} className="location" placeholder="Location" />
+        <input type="text" name="location" onChange={this.handleChange} value={this.location} className="location" placeholder="Place" />
         <button onClick={this.handleSubmit} ><img src="/image/search.png" alt="search icon" /></button>
       </form>
     )
