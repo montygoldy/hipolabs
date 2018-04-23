@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from "../Widgets/Header/Header";
 import Sidebar from "../Widgets/Sidebar/Sidebar";
 import List from "../Widgets/List/List";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-class Venues extends Component {
-  
-  render() {
-    console.log(this.props);
-    return <React.Fragment>
-        <Header type="venues" />
-        <main className="main-content">
-          <section className="venue">
-            <List  searchVenues={this.props.venues} />
-          </section>
-          <Sidebar type="recent-search" />
-        </main>
-      </React.Fragment>;
-  }
+import Loader from "../Widgets/Loader/Loader";
+
+const Venues = ({ venues, isLoading }) => {
+  return (
+    <React.Fragment>
+      <Header type="venues" />
+      <main className="main-content">
+        <section className="venue">
+          { !isLoading ? <List searchVenues={venues} /> : <Loader />  }
+        </section>
+        <Sidebar type="recent-search" />
+      </main>
+    </React.Fragment>
+  );
 };
 
 Venues.propTypes = {
@@ -25,7 +25,8 @@ Venues.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  venues: state.venue.venues
+  venues: state.venue.venues,
+  isLoading : state.venue.isLoading
 })
 
 export default connect(mapStateToProps, null)(Venues);

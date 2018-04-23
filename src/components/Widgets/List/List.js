@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const List = ({ searchVenues }) => {
+ 
   return (
     <ul className="venue-list">
       {
-        searchVenues.map((venue) => (
-          <li className="venue-list__item" key={venue.id}>
-          <Link to={`/venues/${venue.id}`} className="venue-list__itemLink">
+        searchVenues.map((item) => (
+          <li className="venue-list__item" key={item.venue.id}>
+          <Link to={`/venues/${item.venue.id}`} className="venue-list__itemLink">
             <div className="venue-list__cover" />
             <img
               src="/image/background.jpg"
@@ -16,14 +17,14 @@ const List = ({ searchVenues }) => {
               className="venue-list__image"
             />
             <div className="venue-list__onTopData">
-              <h3 className="venue-list__venue-name">{venue.name}</h3>
+              <h3 className="venue-list__venue-name">{item.venue.name}</h3>
               <div className="venue-list__venueInfo">
                 <div className="venue-list__userWrapper">
                   <div className="left">
                     <img src="/image/user-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <span className="user-text">123</span>
+                    <span className="user-text">{item.venue.stats}</span>
                   </div>
                 </div>
                 <div className="venue-list__tagWrapper">
@@ -38,7 +39,7 @@ const List = ({ searchVenues }) => {
                 </div>
                 <div className="venue-list__ratingWrapper">
                   <img src="/image/triangle.png" alt="icon" />
-                  <span className="rating-text">8.8</span>
+                  <span className="rating-text">{item.venue.rating}</span>
                 </div>
               </div>
             </div>

@@ -4,17 +4,18 @@ import Sidebar from "../Widgets/Sidebar/Sidebar";
 import ImageList from "../Widgets/List/ImageList";
 import { fetchVenueDetail } from "../../actions/venues";
 import { connect } from "react-redux";
+import Loader from "../Widgets/Loader/Loader";
 class VenueDetail extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchVenueDetail(this.props.match.params.id);
   }
   render() {
-    const { venue } = this.props;
+    const { venue, isLoading } = this.props;
     return <React.Fragment>
         <Header type="venueDetail" venueDetail={venue} />
         <main className="main-content">
           <section className="venue">
-            <ImageList venueDetail={venue} />
+            { !isLoading ? <ImageList venueDetail={venue} /> : <Loader /> }
           </section>
           <div className="sidebar-wrapper">
             <Sidebar type="tips" venueDetail={venue} />
@@ -25,7 +26,8 @@ class VenueDetail extends Component {
 };
 
 const mapStateToProps = state => ({
-  venue: state.venue.venue
+  venue: state.venue.venue,
+  isLoading: state.venue.isLoading
 })
 
 export default connect(mapStateToProps, {fetchVenueDetail})(VenueDetail);
