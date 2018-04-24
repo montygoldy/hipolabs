@@ -26,8 +26,8 @@ class VenueDetail extends Component {
 };
 
 const mapStateToProps = state => ({
-  venue: state.venue.venue,
-  isLoading: state.venue.isLoading
+  venue: state.venueReducer.venue,
+  isLoading: state.venueReducer.isLoading
 })
 
 export default connect(mapStateToProps, {fetchVenueDetail})(VenueDetail);

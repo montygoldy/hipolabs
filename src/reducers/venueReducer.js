@@ -1,9 +1,10 @@
-import {  FETCH_VENUE,  SEARCH_VENUES,  FETCH_VENUE_REQUESTED } from "../actions/types";
+import {  FETCH_VENUE,  SEARCH_VENUES,  FETCH_VENUE_REQUESTED, RECENT_SEARCHES } from "../actions/types";
 
 const initialState = {
   venues: [],
   venue: {},
-  isLoading: false
+  isLoading: false,
+  searches: []
 }
 
 
@@ -23,6 +24,9 @@ const venueReducer = (state= initialState, action) => {
       return { ...state, isLoading: true  }
     default:
       return state;
+
+    case RECENT_SEARCHES:
+      return { ...state, searches: [...state.searches, {location: action.payload.location, query: action.payload.place}] };
   }
 }
 

@@ -24,7 +24,7 @@ const List = ({ searchVenues }) => {
                     <img src="/image/user-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <span className="user-text">{item.venue.stats}</span>
+                    <span className="user-text">578</span>
                   </div>
                 </div>
                 <div className="venue-list__tagWrapper">

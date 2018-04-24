@@ -27,7 +27,7 @@ const RenderHeader = ({ headerType, venueInfo }) => {
 
       case "venueDetail":
         template = <div className="venue-detail-header u-margin-bottom-m">
-            {<React.Fragment>
+            { <React.Fragment>
                 <div className="header-top-content">
                   <div className="home-logo">
                     <Link to="/">
@@ -45,6 +45,7 @@ const RenderHeader = ({ headerType, venueInfo }) => {
                         <img src="/image/location-icon.png" alt="Icon" />
                         <span>
                           Cafegeria Mh. hadife Sk. No: 15 Kadikoy
+                          
                         </span>
                       </div>
                       <div className="telephone">
@@ -74,7 +75,8 @@ const RenderHeader = ({ headerType, venueInfo }) => {
                     </div>
                   </div>
                 </div>
-              </React.Fragment>}
+              </React.Fragment>
+            }
           </div>;
         break;
 

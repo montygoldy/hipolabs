@@ -25,8 +25,8 @@ Venues.propTypes = {
 }
 
 const mapStateToProps = state => ({
-  venues: state.venue.venues,
-  isLoading : state.venue.isLoading
+  venues: state.venueReducer.venues,
+  isLoading: state.venueReducer.isLoading
 })
 
 export default connect(mapStateToProps, null)(Venues);
