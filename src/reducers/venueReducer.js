@@ -26,7 +26,7 @@ const venueReducer = (state= initialState, action) => {
       return state;
 
     case RECENT_SEARCHES:
-      return { ...state, searches: [...state.searches, {location: action.payload.location, query: action.payload.place}] };
+      return { ...state, searches: [{ location: action.payload.location, query: action.payload.place }, ...state.searches] };
   }
 }
 
