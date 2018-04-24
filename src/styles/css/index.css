@@ -83,6 +83,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    .pageContainer main.content .notFound {
+      display: flex; }
+      .pageContainer main.content .notFound img {
+        width: 8.5rem;
+        height: 8.5rem;
+        margin-right: 2rem; }
+      .pageContainer main.content .notFound h2 {
+        font-family: "Gotham-Regular" !important;
+        font-size: 3.5rem !important; }
     .pageContainer main.content h2.main-text {
       font-size: 4.5rem;
       font-family: "Gotham-xLight";

@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchForm from "../SearchForm/SearchForm";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const RenderHeader = ({ headerType, venueInfo }) => {
     let template = null;
@@ -93,6 +94,16 @@ const Header = ({ type, venueDetail }) => {
       <RenderHeader headerType={type} venueInfo={venueDetail} />
     </header>
   )
+}
+
+Header.propTypes = {
+  type: PropTypes.object.isRequired,
+  venueDetail: PropTypes.string.isRequired
+}
+
+RenderHeader.propTypes = {
+  headerType: PropTypes.string.isRequired,
+  venueInfo: PropTypes.object.isRequired
 }
 
 export default Header;

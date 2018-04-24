@@ -5,6 +5,7 @@ import ImageList from "../Widgets/List/ImageList";
 import { fetchVenueDetail } from "../../actions/venues";
 import { connect } from "react-redux";
 import Loader from "../Widgets/Loader/Loader";
+import PropTypes from "prop-types";
 class VenueDetail extends Component {
   componentDidMount() {
     this.props.fetchVenueDetail(this.props.match.params.id);
@@ -28,6 +29,12 @@ class VenueDetail extends Component {
     )
   }
 };
+
+VenueDetail.propTypes = {
+  fetchVenueDetail: PropTypes.func.isRequired,
+  venue: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired
+}
 
 const mapStateToProps = state => ({
   venue: state.venueReducer.venue,

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchVenues } from "../../../actions/venues";
+import PropTypes from "prop-types";
 
 const RenderSidebar = ({ sidebarType, searches, onClickSearch, venueTips }) => {
   let template = null;
@@ -77,6 +78,13 @@ const RenderSidebar = ({ sidebarType, searches, onClickSearch, venueTips }) => {
       break;
   }
   return template;
+};
+
+RenderSidebar.propTypes = {
+  sidebarType: PropTypes.string.isRequired,
+  searches: PropTypes.array.isRequired,
+  onClickSearch: PropTypes.func.isRequired,
+  venueTips: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({

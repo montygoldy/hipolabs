@@ -21,7 +21,8 @@ const Venues = ({ venues, isLoading }) => {
 };
 
 Venues.propTypes = {
-  venues: PropTypes.array.isRequired
+  venues: PropTypes.array.isRequired,
+  isLoading: PropTypes.bool.isRequired
 }
 
 const mapStateToProps = state => ({

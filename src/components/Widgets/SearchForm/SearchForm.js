@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { fetchVenues } from "../../../actions/venues";
 import { withRouter } from "react-router";
+import PropTypes from "prop-types";
 class SearchForm extends Component {
 
   handleChange = (e) => {
@@ -27,6 +28,10 @@ class SearchForm extends Component {
       </form>
     )
   }
+}
+
+SearchForm.propTypes = {
+  fetchVenues: PropTypes.func.isRequired
 }
 
 export default withRouter(connect(null, { fetchVenues} )(SearchForm));
