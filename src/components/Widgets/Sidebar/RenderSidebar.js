@@ -22,7 +22,7 @@ class RenderSidebar extends Component {
                   <li className="sidebar__listItem" key={i}>
                     <Link
                       to="/venues"
-                      onClick={this.onClickRecentSearches(search.query, search.location)}
+                      onClick={}
                       className="sidebar__listItemLink"
                     >
                       {search.query} in {search.location}
