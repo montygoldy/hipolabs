@@ -10,8 +10,11 @@ class VenueDetail extends Component {
     this.props.fetchVenueDetail(this.props.match.params.id);
   }
   render() {
+    console.log(this.props);
     const { venue, isLoading } = this.props;
-    return <React.Fragment>
+    console.log("This text", venue);
+    return (
+      <React.Fragment>
         <Header type="venueDetail" venueDetail={venue} />
         <main className="main-content">
           <section className="venue">
@@ -21,7 +24,8 @@ class VenueDetail extends Component {
             <Sidebar type="tips" venueDetail={venue} />
           </div>
         </main>
-      </React.Fragment>;
+      </React.Fragment>
+    )
   }
 };
 

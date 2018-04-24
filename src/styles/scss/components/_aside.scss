@@ -6,14 +6,12 @@
   align-items: center;
   height: 68.5rem;
   background: $color-white;
-
   h3 {
     font-size: 1.6rem;
     color: #4a4a4a;
     padding: 4rem 0 3rem 0;
     position: relative;
     text-transform: uppercase;
-
     &::before {
       content: "";
       width: 7rem;
@@ -26,44 +24,39 @@
       z-index: 10;
     }
   }
-
   &__list {
     width: 100%;
     margin-top: 1.5rem;
     list-style: none;
     text-align: center;
   }
-
   &__listItem {
     display: block;
     width: 95%;
     margin: auto;
     padding: 2rem;
-
     &:not(:last-child) {
       border-bottom: 1px solid $color-grey-primary-light;
     }
   }
-
   &__listItemLink {
     text-decoration: none;
     font-size: 1.4rem;
     color: $color-grey-primary;
     transition: all .3s;
-
     &:hover {
       color: $color-grey-primary-dark;
       border-bottom: 1px solid $color-grey-primary-dark;
     }
-
     .left {
+      flex: 0 0 4.2rem;
+      margin-top: 1rem;
       width: 4rem;
       height: 4rem;
       margin-right: 3rem;
       transform: rotate(45deg);
       position: relative;
       overflow: hidden;
-
       img {
         position: absolute;
         top: -9px;
@@ -73,53 +66,44 @@
         transform: rotate(-45deg);
       }
     }
-
     .right {
+      flex: 1;
       text-align: left;
       font-size: 1.4rem;
-
       h4 {
         margin-bottom: .5rem;
       }
-
       p {
-        font-family: "Gotham-Light"; 
+        font-family: "Gotham-Light";
       }
     }
   }
 }
 
 .tips-sidebar {
-  height: auto!important;
+  height: auto !important;
   box-shadow: 0 0 3.4rem 0 rgba(115, 95, 255, 0.32);
-
   .sidebar__listItem {
-    padding: 3rem 2rem!important;
-
+    padding: 3rem 2rem !important;
     &:last-child {
-      border-bottom: 1px solid $color-grey-primary-light!important;
+      border-bottom: 1px solid $color-grey-primary-light !important;
     }
   }
-
   .sidebar__listItemLink {
     display: flex;
     justify-content: center;
-
     &:hover {
-      border-bottom: none!important;
+      border-bottom: none !important;
     }
   }
-
   .allTips {
     margin: 5rem 0;
     font-size: 1.6rem;
     color: #7a74d2;
     transition: all .3s;
-
     &:hover {
       color: $color-blue-dark;
       transform: scale(1.05);
     }
   }
-  
 }

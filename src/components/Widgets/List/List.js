@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const List = ({ searchVenues }) => {
- 
   return (
     <ul className="venue-list">
-      {
-        searchVenues.map((item) => (
-          <li className="venue-list__item" key={item.venue.id}>
-          <Link to={`/venues/${item.venue.id}`} className="venue-list__itemLink">
+      {searchVenues.map(item => (
+        <li className="venue-list__item" key={item.venue.id}>
+          <Link
+            to={`/venues/${item.venue.id}`}
+            className="venue-list__itemLink"
+          >
             <div className="venue-list__cover" />
             <img
-              src="/image/background.jpg"
-              alt="Venue"
+              // src=""{`${item.photos.groups[0].items[0].prefix}128${item.photos.groups[0].items[0].suffix}`}
+              src="/images/background.jpg"
+              alt="Venue Best Img"
               className="venue-list__image"
             />
             <div className="venue-list__onTopData">
@@ -24,7 +26,8 @@ const List = ({ searchVenues }) => {
                     <img src="/image/user-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <span className="user-text">578</span>
+                    <span className="user-text">654</span>
+                    {/* {item.venue.stats.tipCount} */}
                   </div>
                 </div>
                 <div className="venue-list__tagWrapper">
@@ -45,14 +48,13 @@ const List = ({ searchVenues }) => {
             </div>
           </Link>
         </li>
-        ))
-      }
+      ))}
     </ul>
   );
 };
 
 List.propTypes = {
   searchVenues: PropTypes.array.isRequired
-}
+};
 
 export default List;
