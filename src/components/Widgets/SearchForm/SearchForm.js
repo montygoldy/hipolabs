@@ -34,4 +34,4 @@ SearchForm.propTypes = {
   fetchVenues: PropTypes.func.isRequired
 }
 
-export default withRouter(connect(null, { fetchVenues} )(SearchForm));
+export default withRouter(connect(null, {fetchVenues})(SearchForm));

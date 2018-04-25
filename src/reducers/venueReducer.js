@@ -23,7 +23,6 @@ const initialState = {
 const venueReducer = (state= initialState, action) => {
   switch(action.type) {
     case SEARCH_VENUES:
-    console.log("fetching");
       return {
         ...state, venues: action.payload, isLoading: false
       }  

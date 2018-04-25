@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import Loader from "../Widgets/Loader/Loader";
 import PropTypes from "prop-types";
 class VenueDetail extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchVenueDetail(this.props.match.params.id);
   }
   render() {

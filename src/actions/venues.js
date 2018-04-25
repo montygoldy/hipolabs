@@ -28,3 +28,4 @@ export const fetchVenueDetail = venueId => dispatch => {
     .catch(err => console.log(err));
 };
 
+
