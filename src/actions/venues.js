@@ -18,7 +18,6 @@ export const fetchVenues = (place, location) => dispatch => {
 };
 
 export const fetchVenueDetail = venueId => dispatch => {
-  console.log("dispatching");
   dispatch({ type: FETCH_VENUE_REQUESTED });
   fetch(
     `https://api.foursquare.com/v2/venues/${venueId}?client_id=${api_id}&client_secret=${api_key}&v=20180422`

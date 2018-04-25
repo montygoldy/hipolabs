@@ -12,7 +12,6 @@ class VenueDetail extends Component {
   }
   render() {
     const { venue, isLoading } = this.props;
-    console.log("This text", venue);
     return (
       <React.Fragment>
         <Header type="venueDetail" venueDetail={venue} />

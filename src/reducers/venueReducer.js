@@ -28,7 +28,6 @@ const venueReducer = (state= initialState, action) => {
       }  
     
     case FETCH_VENUE:
-    console.log("fetching Venue");
       return {
         ...state, venue: action.payload, isLoading: false
       }
