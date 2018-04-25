@@ -6,22 +6,12 @@
 }
 
 //Responsiveness
-@include respond(tab-land) {
-  .sidebar-wrapper {
-    top: 0;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-}
 
 @include respond(tab-port) {
   .sidebar-wrapper {
     top: 0;
     margin-top: 1rem;
     margin-bottom: 2rem;
-  }
-  .imageList__item {
-    height: 25rem !important;
   }
 }
 @include respond(phone) {
@@ -31,10 +21,13 @@
     }
     .home-logo {
       width: 20rem !important;
+      .category-icon-wrapper { 
+        padding: 2rem!important;
+        top: 53px!important;
+        left: -41px!important;
+      }
       .category-icon {
-        top: 44px !important;
-        left: -40px !important;
-        width: 13rem !important;
+        width: 6rem;
       }
     }
   }
@@ -49,7 +42,11 @@
 }
 
 @include respond(small-phone) {
-  .imageList__item {
-    height: 20rem !important;
+  .category-icon-wrapper {
+    top: 65px !important;
+    left: -14px !important;
+    .category-icon {
+      width: 4rem !important;
+    }
   }
 }

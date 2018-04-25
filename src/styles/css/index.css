@@ -126,8 +126,8 @@ body {
 
 @media only screen and (max-width: 56.25em) {
   .header-container {
-    height: 320px !important; } }
-@media only screen and (max-width: 75em) {
+    height: 250px !important; }
+
   .header-container .header-content {
     flex-direction: column; }
     .header-container .header-content .home-logo {
@@ -141,51 +141,43 @@ body {
   .main-content {
     flex-direction: column; }
     .main-content section.venue {
-      flex: 1;
       margin-right: 0; } }
 @media only screen and (max-width: 37.5em) {
+  .header-container {
+    height: 320px !important; }
+
   .main-content section.venue {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    margin-right: 0 !important; }
   .main-content .venue-list,
   .main-content .imageList {
     flex-direction: column; }
     .main-content .venue-list__item,
     .main-content .imageList__item {
-      flex: 1; }
-
-  .venue-list__item {
-    height: 25rem !important; } }
-@media only screen and (max-width: 23.5em) {
-  .venue-list__item {
-    height: 20rem !important; } }
+      margin-left: auto;
+      margin-right: auto; } }
 .sidebar-wrapper {
   position: relative;
   top: -100px;
   z-index: 99999;
   margin-bottom: -5rem; }
 
-@media only screen and (max-width: 75em) {
-  .sidebar-wrapper {
-    top: 0;
-    margin-top: 1rem;
-    margin-bottom: 2rem; } }
 @media only screen and (max-width: 56.25em) {
   .sidebar-wrapper {
     top: 0;
     margin-top: 1rem;
-    margin-bottom: 2rem; }
-
-  .imageList__item {
-    height: 25rem !important; } }
+    margin-bottom: 2rem; } }
 @media only screen and (max-width: 37.5em) {
   .venue-detail-header h2.venue-name {
     font-size: 3rem !important; }
   .venue-detail-header .home-logo {
     width: 20rem !important; }
+    .venue-detail-header .home-logo .category-icon-wrapper {
+      padding: 2rem !important;
+      top: 53px !important;
+      left: -41px !important; }
     .venue-detail-header .home-logo .category-icon {
-      top: 44px !important;
-      left: -40px !important;
-      width: 13rem !important; }
+      width: 6rem; }
 
   .rating {
     width: 5rem !important;
@@ -193,8 +185,11 @@ body {
     .rating .rating-text {
       font-size: 1.5rem !important; } }
 @media only screen and (max-width: 23.5em) {
-  .imageList__item {
-    height: 20rem !important; } }
+  .category-icon-wrapper {
+    top: 65px !important;
+    left: -14px !important; }
+    .category-icon-wrapper .category-icon {
+      width: 4rem !important; } }
 .home-logo {
   width: 250px; }
   .home-logo__image {
@@ -220,7 +215,7 @@ body {
 .venue-detail-header {
   background: url("/image/background.jpg");
   background-blend-mode: overlay;
-  background-size: cover; }
+  background-size: cover !important; }
   .venue-detail-header .header-top-content {
     width: 80%;
     margin: auto;
@@ -230,10 +225,15 @@ body {
       margin: auto;
       position: relative;
       margin-bottom: 15rem; }
-      .venue-detail-header .header-top-content .home-logo .category-icon {
+      .venue-detail-header .header-top-content .home-logo .category-icon-wrapper {
+        border: 3px solid #fff;
         position: absolute;
-        top: 85px;
-        left: -65px; }
+        padding: 4rem;
+        transform: rotate(45deg);
+        top: 11.6rem;
+        left: -36px; }
+      .venue-detail-header .header-top-content .home-logo .category-icon {
+        transform: rotate(-45deg); }
     .venue-detail-header .header-top-content h2.venue-name {
       font-family: "Gotham-xLight";
       font-size: 6rem;
@@ -445,7 +445,6 @@ form {
     flex: 0 0 48%;
     margin-bottom: 4%;
     height: 30rem;
-    width: 100%;
     position: relative;
     overflow: hidden; }
   .venue-list__itemLink {
@@ -528,7 +527,6 @@ form {
     flex: 0 0 48%;
     margin-bottom: 4%;
     height: 30rem;
-    width: 100%;
     position: relative; }
   .imageList__itemLink {
     color: #fff;

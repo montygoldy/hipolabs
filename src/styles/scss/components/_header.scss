@@ -31,7 +31,7 @@
 .venue-detail-header {
   background: url('/image/background.jpg');
   background-blend-mode: overlay;
-  background-size: cover;
+  background-size: cover!important;
   .header-top-content {
     width: 80%;
     margin: auto;
@@ -41,10 +41,16 @@
       margin: auto;
       position: relative;
       margin-bottom: 15rem;
-      .category-icon {
+      .category-icon-wrapper{
+        border: 3px solid $color-white;
         position: absolute;
-        top: 85px;
-        left: -65px;
+        padding: 4rem;
+        transform: rotate(45deg);
+        top: 11.6rem;
+        left: -36px;
+      }
+      .category-icon {
+        transform: rotate(-45deg);
       }
     }
     h2.venue-name {

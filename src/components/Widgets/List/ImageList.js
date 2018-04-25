@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const ImageList = ({ venueDetail }) => {
-  const venuePics = venueDetail.photos.groups[0].items;
+  const venuePics = venueDetail.photos.groups ? venueDetail.photos.groups[0].items : <h2>No Photos Found</h2>;
   return (
     <ul className="imageList">
       {venuePics.length > 0 ? (
