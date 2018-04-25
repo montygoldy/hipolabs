@@ -23,5 +23,5 @@ This project was built using HTML, CSS, ReactJs/Redux and Foursquare Api.
 - redux-thunk
   },
 
-!["Screen shot for Home page"]()
-!["Screenshot for Venue page"]()
+!["Screen shot for Home page"](https://github.com/montygoldy/hipolabs/blob/master/doc/home.jpg?raw=true)
+!["Screenshot for Venue page"](https://github.com/montygoldy/hipolabs/blob/master/doc/venue.jpg?raw=true)
