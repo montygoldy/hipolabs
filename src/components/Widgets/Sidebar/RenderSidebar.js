@@ -84,7 +84,7 @@ RenderSidebar.propTypes = {
   sidebarType: PropTypes.string.isRequired,
   searches: PropTypes.array.isRequired,
   onClickSearch: PropTypes.func.isRequired,
-  venueTips: PropTypes.object.isRequired
+  venueTips: PropTypes.object
 };
 
 const mapStateToProps = state => ({

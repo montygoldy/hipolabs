@@ -13,8 +13,7 @@ const List = ({ searchVenues }) => {
           >
             <div className="venue-list__cover" />
             <img
-              // src=""{`${item.photos.groups[0].items[0].prefix}128${item.photos.groups[0].items[0].suffix}`}
-              src="/images/background.jpg"
+              src={`${item.venue.photos.groups[0].items[0].prefix}128${item.venue.photos.groups[0].items[0].suffix}`}
               alt="Venue Best Img"
               className="venue-list__image"
             />
@@ -26,8 +25,7 @@ const List = ({ searchVenues }) => {
                     <img src="/image/user-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <span className="user-text">654</span>
-                    {/* {item.venue.stats.tipCount} */}
+                    <span className="user-text">{item.venue.stats.tipCount}</span>
                   </div>
                 </div>
                 <div className="venue-list__tagWrapper">

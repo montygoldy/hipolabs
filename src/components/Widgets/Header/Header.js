@@ -97,13 +97,13 @@ const Header = ({ type, venueDetail }) => {
 }
 
 Header.propTypes = {
-  type: PropTypes.object.isRequired,
-  venueDetail: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  venueDetail: PropTypes.object
 }
 
 RenderHeader.propTypes = {
   headerType: PropTypes.string.isRequired,
-  venueInfo: PropTypes.object.isRequired
+  venueInfo: PropTypes.object
 }
 
 export default Header;

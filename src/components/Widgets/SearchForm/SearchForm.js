@@ -22,8 +22,8 @@ class SearchForm extends Component {
   render() {
     return (
       <form action="">
-        <input type="text" name="place" onChange={this.handleChange} value={this.place} className="place" placeholder="I'm looking for" />
-        <input type="text" name="location" onChange={this.handleChange} value={this.location} className="location" placeholder="Place" />
+        <input type="text" name="place" onChange={this.handleChange} value={this.place} className="place" placeholder="I'm looking for" required/>
+        <input type="text" name="location" onChange={this.handleChange} value={this.location} className="location" placeholder="Place" required/>
         <button onClick={this.handleSubmit} ><img src="/image/search.png" alt="search icon" /></button>
       </form>
     )

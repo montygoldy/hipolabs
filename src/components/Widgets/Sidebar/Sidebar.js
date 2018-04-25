@@ -8,7 +8,7 @@ const Sidebar = ({ type, venueDetail }) => {
 
 Sidebar.propTypes = {
   type: PropTypes.string.isRequired,
-  venueDetail: PropTypes.object.isRequired
+  venueDetail: PropTypes.object
 }
 
 

@@ -11,7 +11,6 @@ class VenueDetail extends Component {
     this.props.fetchVenueDetail(this.props.match.params.id);
   }
   render() {
-    console.log(this.props);
     const { venue, isLoading } = this.props;
     console.log("This text", venue);
     return (
@@ -32,7 +31,7 @@ class VenueDetail extends Component {
 
 VenueDetail.propTypes = {
   fetchVenueDetail: PropTypes.func.isRequired,
-  venue: PropTypes.array.isRequired,
+  venue: PropTypes.object.isRequired,
   isLoading: PropTypes.bool.isRequired
 }
 
