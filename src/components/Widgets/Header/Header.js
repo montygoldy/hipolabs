@@ -2,6 +2,7 @@ import React from 'react';
 import SearchForm from "../SearchForm/SearchForm";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import ProgressBar from '../ProgessBar/ProgressBar';
 
 const RenderHeader = ({ headerType, venueInfo }) => {
     let template = null;
@@ -27,8 +28,7 @@ const RenderHeader = ({ headerType, venueInfo }) => {
         break;
 
       case "venueDetail":
-        template = < div className = "venue-detail-header u-margin-bottom-m"
-        style = {{background: `url(${venueInfo.bestPhoto.prefix}1400${venueInfo.bestPhoto.suffix}), rgba(18, 25, 95, .6)`}} >
+        template = <div className="venue-detail-header u-margin-bottom-m" style={{ background: `url(${venueInfo.bestPhoto.prefix}1400${venueInfo.bestPhoto.suffix}), rgba(18, 25, 95, .6)` }}>
             {<React.Fragment>
                 <div className="header-top-content">
                   <div className="home-logo">
@@ -55,7 +55,7 @@ const RenderHeader = ({ headerType, venueInfo }) => {
                       </div>
                       <div className="telephone">
                         <img src="/image/telephone-icon.png" alt="Icon" />
-                        <span>{venueInfo.contact.formattedPhone}</span>
+                        <span>{venueInfo.contact.formattedPhone ? venueInfo.contact.formattedPhone : "No Contact Info"}</span>
                       </div>
                       <div className="venue-userInfo">
                         <div className="user">
@@ -64,9 +64,7 @@ const RenderHeader = ({ headerType, venueInfo }) => {
                         </div>
                         <div className="tag">
                           <img src="/image/tag-icon.png" alt="Icon" />
-                          <div className="bar">
-                            <div className="percentage" />
-                          </div>
+                          <ProgressBar price={venueInfo.price.tier} />
                         </div>
                       </div>
                     </div>

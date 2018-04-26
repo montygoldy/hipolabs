@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import ProgressBar from "../ProgessBar/ProgressBar";
 
 const List = ({ searchVenues }) => {
   return (
@@ -33,9 +34,7 @@ const List = ({ searchVenues }) => {
                     <img src="/image/tag-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <div className="bar">
-                      <div className="percentage" />
-                    </div>
+                    <ProgressBar price={ item.venue.price.tier } />
                   </div>
                 </div>
                 <div className="venue-list__ratingWrapper">

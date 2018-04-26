@@ -262,14 +262,6 @@ body {
           .venue-detail-header .venue-info-section .venue-info-content .left-side .venue-userInfo .tag img {
             width: 1rem;
             height: 1rem; }
-          .venue-detail-header .venue-info-section .venue-info-content .left-side .venue-userInfo .tag .bar {
-            width: 6rem;
-            height: 3px;
-            background: #000; }
-            .venue-detail-header .venue-info-section .venue-info-content .left-side .venue-userInfo .tag .bar .percentage {
-              width: 80%;
-              height: 3px;
-              background: linear-gradient(to right bottom, #c4c0ff, #a59fee, #8b81ff, #1e0db4); }
       .venue-detail-header .venue-info-section .venue-info-content .right-side {
         margin-top: -120px; }
         .venue-detail-header .venue-info-section .venue-info-content .right-side .rating {
@@ -494,14 +486,6 @@ form {
       width: 1rem;
       height: 1rem;
       margin-right: .8rem; }
-    .venue-list__venueInfo .right .bar {
-      width: 6rem;
-      height: 3px;
-      background: #000; }
-      .venue-list__venueInfo .right .bar .percentage {
-        width: 80%;
-        height: 3px;
-        background: linear-gradient(to right bottom, #c4c0ff, #a59fee, #8b81ff, #1e0db4); }
   .venue-list__userWrapper, .venue-list__tagWrapper {
     flex: 0 0 25%; }
   .venue-list__ratingWrapper {
@@ -586,5 +570,23 @@ form {
     background: url("/image/loader.svg") no-repeat 0 0;
     background-size: 248px 248px;
     animation: spin 1s infinite linear; }
+
+.bar {
+  width: 6rem;
+  height: 3px;
+  border-radius: 15rem !important;
+  background: #000;
+  display: flex; }
+  .bar .percentage {
+    width: 25%;
+    height: 3px; }
+  .bar .one {
+    background: #c4c0ff; }
+  .bar .two {
+    background: #a59fee; }
+  .bar .three {
+    background: #8b81ff; }
+  .bar .four {
+    background: #685dea; }
 
 /*# sourceMappingURL=index.css.map */

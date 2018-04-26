@@ -67,18 +67,6 @@
         margin-right: .8rem;
       }
     }
-    .right {
-      .bar {
-        width: 6rem;
-        height: 3px;
-        background: #000;
-        .percentage {
-          width: 80%;
-          height: 3px;
-          background: linear-gradient(to right bottom, $color-line, #a59fee, #8b81ff, $color-blue-dark);
-        }
-      }
-    }
   }
   &__userWrapper,
   &__tagWrapper {
