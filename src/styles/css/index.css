@@ -574,7 +574,7 @@ form {
 .bar {
   width: 6rem;
   height: 3px;
-  border-radius: 15rem !important;
+  border-radius: 35rem !important;
   background: #000;
   display: flex; }
   .bar .percentage {
