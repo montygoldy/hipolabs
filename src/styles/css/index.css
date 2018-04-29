@@ -121,6 +121,11 @@ body {
     flex: 0 0 60%;
     margin-right: 4.5rem;
     position: relative; }
+    .main-content section.venue h3 {
+      font-family: "Gotham-xLight";
+      text-align: center;
+      font-size: 3rem;
+      margin: 4rem; }
   .main-content .sidebar-wrapper {
     flex: 1; }
 
@@ -485,9 +490,11 @@ form {
     .venue-list__venueInfo .left img {
       width: 1rem;
       height: 1rem;
-      margin-right: .8rem; }
+      margin-right: 0.8rem; }
   .venue-list__userWrapper, .venue-list__tagWrapper {
     flex: 0 0 25%; }
+  .venue-list__tagWrapper {
+    margin-left: 2rem; }
   .venue-list__ratingWrapper {
     flex: 1;
     position: relative; }

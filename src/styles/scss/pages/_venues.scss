@@ -9,6 +9,13 @@
     flex: 0 0 60%;
     margin-right: 4.5rem;
     position: relative;
+
+    h3 {
+      font-family: "Gotham-xLight";
+      text-align: center;
+      font-size: 3rem;
+      margin: 4rem;
+    }
   }
 
   .sidebar-wrapper {
@@ -49,15 +56,13 @@
 }
 
 @include respond(phone) {
-
   .header-container {
     height: 320px !important;
   }
   .main-content {
-
-    section.venue{
+    section.venue {
       margin-bottom: 2rem;
-      margin-right: 0!important;
+      margin-right: 0 !important;
     }
 
     .venue-list,
@@ -73,5 +78,4 @@
 }
 
 @include respond(small-phone) {
-  
 }

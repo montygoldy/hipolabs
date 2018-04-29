@@ -2,7 +2,8 @@ import {
   FETCH_VENUE,
   SEARCH_VENUES,
   FETCH_VENUE_REQUESTED,
-  RECENT_SEARCHES
+  RECENT_SEARCHES,
+  FETCH_VENUE_ERROR
 } from "../actions/types";
 
 const initialState = {
@@ -21,7 +22,8 @@ const initialState = {
     photos: {}
   },
   isLoading: false,
-  searches: []
+  searches: [],
+  hasError: false
 };
 
 const venueReducer = (state = initialState, action) => {
@@ -30,18 +32,20 @@ const venueReducer = (state = initialState, action) => {
       return {
         ...state,
         venues: action.payload,
-        isLoading: false
+        isLoading: false,
+        hasError: false
       };
 
     case FETCH_VENUE:
       return {
         ...state,
         venue: action.payload,
-        isLoading: false
+        isLoading: false,
+        hasError: false
       };
 
     case FETCH_VENUE_REQUESTED:
-      return { ...state, isLoading: true };
+      return { ...state, isLoading: true, hasError: false };
 
     case RECENT_SEARCHES:
       return {
@@ -51,6 +55,9 @@ const venueReducer = (state = initialState, action) => {
           ...state.searches
         ]
       };
+
+    case FETCH_VENUE_ERROR:
+      return { ...state, isLoading: false, hasError: true };
 
     default:
       return state;
