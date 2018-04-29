@@ -4,33 +4,16 @@ import PropTypes from "prop-types";
 const ProgressBar = ({ price }) => {
   return (
     <div className="bar">
-      {price === 1 && (
-        <React.Fragment>
-          <span className="percentage one" />
-          <span className="percentage two" />
-        </React.Fragment>
-      )}
-      {price === 2 && (
-        <React.Fragment>
-          <span className="percentage one" />
-          <span className="percentage two" />
-          <span className="percentage three" />
-        </React.Fragment>
-      )}
-      {price === 3 && (
-        <React.Fragment>
-          <span className="percentage one" />
-          <span className="percentage two" />
-          <span className="percentage three" />
-          <span className="percentage four" />
-        </React.Fragment>
-      )}
+      {price >= 0 && <span className="percentage one" />}
+      {price >= 1 && <span className="percentage two" />}
+      {price >= 2 && <span className="percentage three" />}
+      {price >= 3 && <span className="percentage four" />}
     </div>
   );
 };
 
 ProgressBar.propTypes = {
-  price: PropTypes.number.isRequired
-}
+  price: PropTypes.number
+};
 
 export default ProgressBar;

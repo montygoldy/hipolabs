@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const ImageList = ({ venueDetail }) => {
-  const venuePics = venueDetail.photos.groups ? venueDetail.photos.groups[0].items : <h2>No Photos Found</h2>;
+  const venuePics = venueDetail.photos.groups[0] ? (
+    venueDetail.photos.groups[0].items
+  ) : (
+    <h3>No Photos Found</h3>
+  );
   return (
     <ul className="imageList">
       {venuePics.length > 0 ? (
@@ -46,6 +50,6 @@ const ImageList = ({ venueDetail }) => {
 
 ImageList.propTypes = {
   venueDetail: PropTypes.object.isRequired
-}
+};
 
 export default ImageList;

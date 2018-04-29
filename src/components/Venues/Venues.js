@@ -7,7 +7,6 @@ import PropTypes from "prop-types";
 import Loader from "../Widgets/Loader/Loader";
 
 const Venues = ({ venues, isLoading, hasError }) => {
-  console.log(hasError, isLoading);
   return (
     <React.Fragment>
       <Header type="venues" />
