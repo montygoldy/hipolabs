@@ -45,7 +45,7 @@ const List = ({ searchVenues }) => {
                     {item.venue.price ? (
                       <ProgressBar price={item.venue.price.tier} />
                     ) : (
-                      <ProgressBar />
+                      <ProgressBar price={1} />
                     )}
                   </div>
                 </div>
