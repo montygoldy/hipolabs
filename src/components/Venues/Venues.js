@@ -13,7 +13,7 @@ const Venues = ({ venues, isLoading, hasError }) => {
       <main className="main-content">
         <section className="venue">
           {hasError ? (
-            <h3>:( Sorry No Results Found</h3>
+            <h3 className="noResult">:( Sorry No Results Found</h3>
           ) : !isLoading ? (
             <List searchVenues={venues} />
           ) : (
