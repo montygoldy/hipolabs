@@ -1,4 +1,10 @@
-import {  FETCH_VENUE,  SEARCH_VENUES,  FETCH_VENUE_REQUESTED, RECENT_SEARCHES } from "../actions/types";
+import {
+  FETCH_VENUE,
+  SEARCH_VENUES,
+  FETCH_VENUE_REQUESTED,
+  RECENT_SEARCHES,
+  FETCH_VENUE_ERROR
+} from "../actions/types";
 
 const initialState = {
   venues: [
@@ -16,32 +22,46 @@ const initialState = {
     photos: {}
   },
   isLoading: false,
-  searches: []
+  searches: [],
+  hasError: false
 };
 
-
-const venueReducer = (state= initialState, action) => {
-  switch(action.type) {
+const venueReducer = (state = initialState, action) => {
+  switch (action.type) {
     case SEARCH_VENUES:
-    console.log("fetching");
       return {
-        ...state, venues: action.payload, isLoading: false
-      }  
-    
+        ...state,
+        venues: action.payload,
+        isLoading: false,
+        hasError: false
+      };
+
     case FETCH_VENUE:
-    console.log("fetching Venue");
       return {
-        ...state, venue: action.payload, isLoading: false
-      }
+        ...state,
+        venue: action.payload,
+        isLoading: false,
+        hasError: false
+      };
 
     case FETCH_VENUE_REQUESTED:
-      return { ...state, isLoading: true  }
-    default:
-      return state;
+      return { ...state, isLoading: true, hasError: false };
 
     case RECENT_SEARCHES:
-      return { ...state, searches: [{ location: action.payload.location, query: action.payload.place }, ...state.searches] };
+      return {
+        ...state,
+        searches: [
+          { location: action.payload.location, query: action.payload.place },
+          ...state.searches
+        ]
+      };
+
+    case FETCH_VENUE_ERROR:
+      return { ...state, isLoading: false, hasError: true };
+
+    default:
+      return state;
   }
-}
+};
 
 export default venueReducer;

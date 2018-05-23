@@ -9,6 +9,13 @@
     flex: 0 0 60%;
     margin-right: 4.5rem;
     position: relative;
+
+    h3.noResult {
+      font-family: "Gotham-xLight";
+      text-align: center;
+      font-size: 3rem;
+      margin: 4rem;
+    }
   }
 
   .sidebar-wrapper {
@@ -20,46 +27,42 @@
 
 @include respond(tab-port) {
   .header-container {
-    height: 320px !important;
+    height: 250px !important;
   }
-}
 
-@include respond(tab-land) {
-
-  .header-container{
-    
+  .header-container {
     .header-content {
       flex-direction: column;
-
-      .home-logo{
+      .home-logo {
         margin: auto;
-        margin-bottom: 1rem!important;
+        margin-bottom: 1rem !important;
       }
-
-      .search-container{
-        margin-top: 1rem!important;
-
+      .search-container {
+        margin-top: 1rem !important;
         form {
           margin: auto;
         }
       }
     }
   }
+
   .main-content {
     flex-direction: column;
 
     section.venue {
-      flex: 1;
       margin-right: 0;
     }
   }
 }
 
 @include respond(phone) {
+  .header-container {
+    height: 320px !important;
+  }
   .main-content {
-
-    section.venue{
+    section.venue {
       margin-bottom: 2rem;
+      margin-right: 0 !important;
     }
 
     .venue-list,
@@ -67,17 +70,12 @@
       flex-direction: column;
 
       &__item {
-        flex: 1;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
-  }
-  .venue-list__item {
-    height: 25rem !important;
   }
 }
 
 @include respond(small-phone) {
-  .venue-list__item {
-    height: 20rem!important;
-  }
 }

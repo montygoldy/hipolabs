@@ -2,6 +2,7 @@ import React from 'react';
 import SearchForm from "../SearchForm/SearchForm";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import ProgressBar from '../ProgessBar/ProgressBar';
 
 const RenderHeader = ({ headerType, venueInfo }) => {
     let template = null;
@@ -27,14 +28,16 @@ const RenderHeader = ({ headerType, venueInfo }) => {
         break;
 
       case "venueDetail":
-        template = <div className="venue-detail-header u-margin-bottom-m">
-            { <React.Fragment>
+        template = <div className="venue-detail-header u-margin-bottom-m" style={{ background: `url(${venueInfo.bestPhoto.prefix}1400${venueInfo.bestPhoto.suffix}), rgba(18, 25, 95, .6)` }}>
+            {<React.Fragment>
                 <div className="header-top-content">
                   <div className="home-logo">
                     <Link to="/">
                       <img src="/image/logo/logo-venue.png" alt="logo" className="home-logo__image" />
                     </Link>
-                    <img src="/image/category-icon.png" alt="category icon" className="category-icon" />
+                    .<div className="category-icon-wrapper">
+                      <img src={`${venueInfo.categories[0].icon.prefix}100${venueInfo.categories[0].icon.suffix}`} alt="category icon" className="category-icon" />
+                    </div>
                   </div>
                   <h2 className="venue-name">{venueInfo.name}</h2>
                 </div>
@@ -45,24 +48,23 @@ const RenderHeader = ({ headerType, venueInfo }) => {
                       <div className="address">
                         <img src="/image/location-icon.png" alt="Icon" />
                         <span>
-                          Cafegeria Mh. hadife Sk. No: 15 Kadikoy
-                          
+                          {`${venueInfo.location.address}, ${
+                            venueInfo.location.city
+                          }, ${venueInfo.location.country}`}
                         </span>
                       </div>
                       <div className="telephone">
                         <img src="/image/telephone-icon.png" alt="Icon" />
-                        <span>0 (216) 346718</span>
+                        <span>{venueInfo.contact.formattedPhone ? venueInfo.contact.formattedPhone : "No Contact Info"}</span>
                       </div>
                       <div className="venue-userInfo">
                         <div className="user">
                           <img src="/image/user-icon.png" alt="Icon" />
-                          <span>`${venueInfo.name}`</span>
+                          <span>{venueInfo.stats.tipCount}</span>
                         </div>
                         <div className="tag">
                           <img src="/image/tag-icon.png" alt="Icon" />
-                          <div className="bar">
-                            <div className="percentage" />
-                          </div>
+                          <ProgressBar price={venueInfo.price.tier} />
                         </div>
                       </div>
                     </div>
@@ -76,8 +78,7 @@ const RenderHeader = ({ headerType, venueInfo }) => {
                     </div>
                   </div>
                 </div>
-              </React.Fragment>
-            }
+              </React.Fragment>}
           </div>;
         break;
 

@@ -60,6 +60,14 @@ body {
   100% {
     transform: rotate(360deg);
     transform-origin: center center; } }
+.fade-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in; }
+
 .u-margin-bottom-l {
   margin-bottom: 8rem !important; }
 
@@ -121,13 +129,18 @@ body {
     flex: 0 0 60%;
     margin-right: 4.5rem;
     position: relative; }
+    .main-content section.venue h3.noResult {
+      font-family: "Gotham-xLight";
+      text-align: center;
+      font-size: 3rem;
+      margin: 4rem; }
   .main-content .sidebar-wrapper {
     flex: 1; }
 
 @media only screen and (max-width: 56.25em) {
   .header-container {
-    height: 320px !important; } }
-@media only screen and (max-width: 75em) {
+    height: 250px !important; }
+
   .header-container .header-content {
     flex-direction: column; }
     .header-container .header-content .home-logo {
@@ -141,51 +154,43 @@ body {
   .main-content {
     flex-direction: column; }
     .main-content section.venue {
-      flex: 1;
       margin-right: 0; } }
 @media only screen and (max-width: 37.5em) {
+  .header-container {
+    height: 320px !important; }
+
   .main-content section.venue {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    margin-right: 0 !important; }
   .main-content .venue-list,
   .main-content .imageList {
     flex-direction: column; }
     .main-content .venue-list__item,
     .main-content .imageList__item {
-      flex: 1; }
-
-  .venue-list__item {
-    height: 25rem !important; } }
-@media only screen and (max-width: 23.5em) {
-  .venue-list__item {
-    height: 20rem !important; } }
+      margin-left: auto;
+      margin-right: auto; } }
 .sidebar-wrapper {
   position: relative;
   top: -100px;
   z-index: 99999;
   margin-bottom: -5rem; }
 
-@media only screen and (max-width: 75em) {
-  .sidebar-wrapper {
-    top: 0;
-    margin-top: 1rem;
-    margin-bottom: 2rem; } }
 @media only screen and (max-width: 56.25em) {
   .sidebar-wrapper {
     top: 0;
     margin-top: 1rem;
-    margin-bottom: 2rem; }
-
-  .imageList__item {
-    height: 25rem !important; } }
+    margin-bottom: 2rem; } }
 @media only screen and (max-width: 37.5em) {
   .venue-detail-header h2.venue-name {
     font-size: 3rem !important; }
   .venue-detail-header .home-logo {
     width: 20rem !important; }
+    .venue-detail-header .home-logo .category-icon-wrapper {
+      padding: 2rem !important;
+      top: 53px !important;
+      left: -41px !important; }
     .venue-detail-header .home-logo .category-icon {
-      top: 44px !important;
-      left: -40px !important;
-      width: 13rem !important; }
+      width: 6rem; }
 
   .rating {
     width: 5rem !important;
@@ -193,8 +198,11 @@ body {
     .rating .rating-text {
       font-size: 1.5rem !important; } }
 @media only screen and (max-width: 23.5em) {
-  .imageList__item {
-    height: 20rem !important; } }
+  .category-icon-wrapper {
+    top: 65px !important;
+    left: -14px !important; }
+    .category-icon-wrapper .category-icon {
+      width: 4rem !important; } }
 .home-logo {
   width: 250px; }
   .home-logo__image {
@@ -220,7 +228,7 @@ body {
 .venue-detail-header {
   background: url("/image/background.jpg");
   background-blend-mode: overlay;
-  background-size: cover; }
+  background-size: cover !important; }
   .venue-detail-header .header-top-content {
     width: 80%;
     margin: auto;
@@ -230,10 +238,15 @@ body {
       margin: auto;
       position: relative;
       margin-bottom: 15rem; }
-      .venue-detail-header .header-top-content .home-logo .category-icon {
+      .venue-detail-header .header-top-content .home-logo .category-icon-wrapper {
+        border: 3px solid #fff;
         position: absolute;
-        top: 85px;
-        left: -65px; }
+        padding: 4rem;
+        transform: rotate(45deg);
+        top: 11.6rem;
+        left: -36px; }
+      .venue-detail-header .header-top-content .home-logo .category-icon {
+        transform: rotate(-45deg); }
     .venue-detail-header .header-top-content h2.venue-name {
       font-family: "Gotham-xLight";
       font-size: 6rem;
@@ -262,14 +275,6 @@ body {
           .venue-detail-header .venue-info-section .venue-info-content .left-side .venue-userInfo .tag img {
             width: 1rem;
             height: 1rem; }
-          .venue-detail-header .venue-info-section .venue-info-content .left-side .venue-userInfo .tag .bar {
-            width: 6rem;
-            height: 3px;
-            background: #000; }
-            .venue-detail-header .venue-info-section .venue-info-content .left-side .venue-userInfo .tag .bar .percentage {
-              width: 80%;
-              height: 3px;
-              background: linear-gradient(to right bottom, #c4c0ff, #a59fee, #8b81ff, #1e0db4); }
       .venue-detail-header .venue-info-section .venue-info-content .right-side {
         margin-top: -120px; }
         .venue-detail-header .venue-info-section .venue-info-content .right-side .rating {
@@ -445,7 +450,6 @@ form {
     flex: 0 0 48%;
     margin-bottom: 4%;
     height: 30rem;
-    width: 100%;
     position: relative;
     overflow: hidden; }
   .venue-list__itemLink {
@@ -494,17 +498,11 @@ form {
     .venue-list__venueInfo .left img {
       width: 1rem;
       height: 1rem;
-      margin-right: .8rem; }
-    .venue-list__venueInfo .right .bar {
-      width: 6rem;
-      height: 3px;
-      background: #000; }
-      .venue-list__venueInfo .right .bar .percentage {
-        width: 80%;
-        height: 3px;
-        background: linear-gradient(to right bottom, #c4c0ff, #a59fee, #8b81ff, #1e0db4); }
+      margin-right: 0.8rem; }
   .venue-list__userWrapper, .venue-list__tagWrapper {
     flex: 0 0 25%; }
+  .venue-list__tagWrapper {
+    margin-left: 2rem; }
   .venue-list__ratingWrapper {
     flex: 1;
     position: relative; }
@@ -528,7 +526,6 @@ form {
     flex: 0 0 48%;
     margin-bottom: 4%;
     height: 30rem;
-    width: 100%;
     position: relative; }
   .imageList__itemLink {
     color: #fff;
@@ -588,5 +585,23 @@ form {
     background: url("/image/loader.svg") no-repeat 0 0;
     background-size: 248px 248px;
     animation: spin 1s infinite linear; }
+
+.bar {
+  width: 6rem;
+  height: 3px;
+  border-radius: 35rem !important;
+  background: #000;
+  display: flex; }
+  .bar .percentage {
+    width: 25%;
+    height: 3px; }
+  .bar .one {
+    background: #c4c0ff; }
+  .bar .two {
+    background: #a59fee; }
+  .bar .three {
+    background: #8b81ff; }
+  .bar .four {
+    background: #685dea; }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,23 @@
+.bar {
+  width: 6rem;
+  height: 3px;
+  border-radius: 35rem !important;
+  background: #000;
+  display: flex;
+  .percentage {
+    width: 25%;
+    height: 3px;
+  }
+  .one {
+    background: $color-line;
+  }
+  .two {
+    background: #a59fee;
+  }
+  .three {
+    background: #8b81ff;
+  }
+  .four {
+    background: #685dea;
+  }
+}

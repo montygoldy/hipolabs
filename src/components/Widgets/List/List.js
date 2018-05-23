@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import ProgressBar from "../ProgessBar/ProgressBar";
 
 const List = ({ searchVenues }) => {
   return (
@@ -13,7 +14,13 @@ const List = ({ searchVenues }) => {
           >
             <div className="venue-list__cover" />
             <img
-              src={`${item.venue.photos.groups[0].items[0].prefix}128${item.venue.photos.groups[0].items[0].suffix}`}
+              src={
+                item.venue.photos.groups[0]
+                  ? `${item.venue.photos.groups[0].items[0].prefix}128${
+                      item.venue.photos.groups[0].items[0].suffix
+                    }`
+                  : ""
+              }
               alt="Venue Best Img"
               className="venue-list__image"
             />
@@ -25,7 +32,9 @@ const List = ({ searchVenues }) => {
                     <img src="/image/user-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <span className="user-text">{item.venue.stats.tipCount}</span>
+                    <span className="user-text">
+                      {item.venue.stats ? item.venue.stats.tipCount : "No Info"}
+                    </span>
                   </div>
                 </div>
                 <div className="venue-list__tagWrapper">
@@ -33,9 +42,11 @@ const List = ({ searchVenues }) => {
                     <img src="/image/tag-icon.png" alt="Icon" />
                   </div>
                   <div className="right">
-                    <div className="bar">
-                      <div className="percentage" />
-                    </div>
+                    {item.venue.price ? (
+                      <ProgressBar price={item.venue.price.tier} />
+                    ) : (
+                      <ProgressBar price={1} />
+                    )}
                   </div>
                 </div>
                 <div className="venue-list__ratingWrapper">

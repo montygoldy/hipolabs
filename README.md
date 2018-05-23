@@ -1,7 +1,7 @@
 
 # Frontend App
 
-This is a sample app to search locations through Foursquare Api. A user have to enter a query and location to fetch the  first 10 recommendations. In the sidebar you have access to you previous searches.
+This is a sample app to search locations through Foursquare Api. A user have to enter a query and location to fetch the recommendations. In the sidebar you have access to your previous searches.
 
 This project was built using HTML, CSS, ReactJs/Redux and Foursquare Api. 
 
@@ -21,7 +21,6 @@ This project was built using HTML, CSS, ReactJs/Redux and Foursquare Api.
 - react-redux
 - redux-localstorage
 - redux-thunk
-  },
 
 !["Screen shot for Home page"](https://github.com/montygoldy/hipolabs/blob/master/doc/home.jpg?raw=true)
 !["Screenshot for Venue page"](https://github.com/montygoldy/hipolabs/blob/master/doc/venue.jpg?raw=true)

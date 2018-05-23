@@ -31,7 +31,7 @@ const RenderSidebar = ({ sidebarType, searches, onClickSearch, venueTips }) => {
       break;
 
     case "tips":
-      const itemTips = venueTips.tips.groups[0].items;
+      const itemTips = venueTips.tips.groups ? venueTips.tips.groups[0].items : <h4>No Tips founds</h4>;
       template = (
         <aside className="sidebar tips-sidebar">
           <h3>Tips</h3>
